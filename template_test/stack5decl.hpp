@@ -20,6 +20,7 @@ public:
 	template<typename T2>
 	Stack<T>& operator=(Stack<T2> const& op2);
 
+	// declare all Stack instances are friend class 
 	template<typename> friend class Stack;
 };
 
@@ -36,8 +37,7 @@ inline Stack<T>& Stack<T>::operator=(Stack<T2> const & op2)
 	//	temp.pop();
 	//}
 	//return *this;
-
-	// declare all Stack instances are friend class 
+		
 	elems.clear();
 	elems.insert(elems.begin(), op2.elems.begin(), op2.elems.end());
 	return *this;
