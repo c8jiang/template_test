@@ -1,6 +1,6 @@
 #pragma once
 
-#include <utility>
+//#include <utility>
 #include <iostream>
 
 class X
@@ -10,17 +10,17 @@ class X
 
 void g(X&)
 {
-	std::cout << "g(X&) for variable\n";
+	std::cout << "g() for variable\n";
 }
 
 void g(X const&)
 {
-	std::cout << "g(X const&) for constant\n";
+	std::cout << "g() for constant\n";
 }
 
 void g(X&&)
 {
-	std::cout << "g(X&&) for movable object\n";
+	std::cout << "g() for movable object\n";
 }
 
 // let f() forward argument val to g()
