@@ -63,7 +63,7 @@ int main()
 
 #endif
 
-#if 1
+#if 0
 #include "move1.hpp"
 //#include "move2.hpp"
 
@@ -81,4 +81,27 @@ int main()
 	return 0;
 }
 
+#endif
+
+#if 1
+#include "specialmemtempl1.hpp"
+
+int main()
+{
+	//std::string s = "test";
+
+	//Person p1(s);
+	//Person p2("temp");
+
+	Person const pc("const");
+
+	//Person p3(p1);		// ERROR. overload resolution rule
+	Person p3(pc);
+	//Person p4(std::move(p1));
+
+	//Person p5(std::string("ss"));
+
+	system("pause");
+	return 0;
+}
 #endif
